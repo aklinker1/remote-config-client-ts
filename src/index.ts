@@ -12,7 +12,7 @@ export interface RemoteConfigOptions<T> {
    */
   interval?: number;
   /**
-   * A custom implementation of `console.warn`
+   * Allow passing a custom implementation of `console.warn`
    */
   warn?: typeof console.warn;
 }

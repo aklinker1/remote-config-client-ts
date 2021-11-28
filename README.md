@@ -40,6 +40,9 @@ createClient({
   defaultConfig: {
     someField: 'Some value',
   },
+
+  // Override the default logging behavior of console.warn
+  warn: someWarnMethod,
 });
 ```
 
