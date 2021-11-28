@@ -14,11 +14,11 @@ npm i @anime-skip/remote-config
 Then initialize the client:
 
 ```ts
-import { initRemoteConfig } from "@anime-skip/remote-config";
+import { initRemoteConfig } from '@anime-skip/remote-config';
 
 export const remoteConfig = initRemoteConfig({
-  baseUrl: "https://remote-config.anime-skip.com",
-  app: "Anime Skip Player",
+  baseUrl: 'https://remote-config.anime-skip.com',
+  app: 'Anime Skip Player',
 });
 
 // Access configuration from the object
@@ -38,28 +38,28 @@ createClient({
 
   // Set an initial config while the config is loading for the first time
   defaultConfig: {
-    someField: "Some value",
+    someField: 'Some value',
   },
 });
 ```
 
 ### Methods
 
-#### `get`
+#### `get()`
 
 An alternative method for accessing the remote config:
 
 ```ts
-remoteConfig.get("someField") === remoteConfig.someField;
+remoteConfig.get('someField') === remoteConfig.someField;
 ```
 
 > Method names can conflict with remote config fields. In that case, you can use `get(...)` to grab the value instead of accessing it directly through the `remoteConfig` object.
 >
 > ```ts
-> remoteConfig.get("get");
+> remoteConfig.get('get');
 > ```
 
-#### `all`
+#### `all()`
 
 Get all the remote config as a plain JS object without these methods on it:
 
@@ -67,7 +67,7 @@ Get all the remote config as a plain JS object without these methods on it:
 console.log(remoteConfig.all());
 ```
 
-#### `waitForConfig`
+#### `waitForConfig()`
 
 Returns a `Promise<void>` for when the remote config is loaded from the server after being initialized
 
@@ -77,7 +77,7 @@ await remoteConfig.waitForConfig();
 console.log(remoteConfig.someField);
 ```
 
-#### `fetchNow`
+#### `fetchNow()`
 
 Fetch and cache the latest config from the server. After the promise has been resolved, you access the config through the object like usual.
 
