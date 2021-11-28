@@ -1,0 +1,31 @@
+{
+  "name": "@anime-skip/remote-config",
+  "version": "1.0.0",
+  "repository": "https://github.com/anime-skip/remote-config-client-ts",
+  "author": "Aaron Klinker <aaronklinker1@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "src/*",
+    "lib/*"
+  ],
+  "scripts": {
+    "compile": "tsc --noEmit",
+    "build": "tsc",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky install",
+    "prepack": "pnpm build"
+  },
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
+    "typescript": "^4.4.4"
+  }
+}
